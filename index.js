@@ -17,7 +17,6 @@ $(()=>{
                     item.style.backgroundColor = "orange";
                     item.style.borderTopWidth = "2px";
                     item.style.borderLeftWidth = "2px";
-                    item.stle.textIndent = "-2px";
                 }
                 else
                 {
@@ -171,6 +170,9 @@ tiles.forEach(tile => {
     if (tile.innerHTML.length > 16) {
         tile.style.fontSize = "0.65rem";
     } 
+    else if (tile.innerHTML.includes("Puck Drop Foul")) {
+        tile.style.fontSize = "0.75rem";
+    }
     else {
         tile.style.fontSize = "0.8rem";
     }
