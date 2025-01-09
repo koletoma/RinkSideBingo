@@ -76,13 +76,13 @@ Difficulty Breakdown:
     commonTiles = [
         "Icing", "Home Goal" , "Away Goal" , "Offside" , "Tripping" , "Hooking", "High Stick",
         "Puck In Stands" , "Broken Stick" , "3 on 2" , "Player Blocks Shot", "Glove Save", "Mascot on Camera", 
-        "Face Off Violation", "Penalty Kill (Home)", "Penalty Kill (Away)",
+        "Puck Drop Foul", "Penalty Kill (Home)", "Penalty Kill (Away)",
         "Power Play Goal (Home)" , "Power Play Goal (Away)"
     ];
 
     uncommonTiles = [
         "Hit the Post", "Fight Ensues" , "Double-Double" , "Blood!" , 
-        "Player Earns 3pts" , "Goalie Interference" , "Net off post" , "Player Exits Game", 
+        "Player Earns 3pts" , "Goalie Bump" , "Net off post" , "Player Exits Game", 
         "Top Shelf", "Captain Scores", "Rookie"
     ];
     rareTiles = [
@@ -168,7 +168,7 @@ function shuffle(array) {
 function adjustFontSize() {
 const tiles = document.querySelectorAll(".tile");
 tiles.forEach(tile => {
-    if (tile.innerHTML.includes("Interference", "Power Play")) {
+    if (tile.innerHTML.length > 16) {
         tile.style.fontSize = "0.65rem";
     } 
     else {

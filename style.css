@@ -15,6 +15,7 @@ button{
     border-bottom-width: 2px;
     border-right-width: 2px;
     color: black;
+    text-align: center;
 }
 body{
     background-image: url('./images/rink.jpg');
@@ -89,6 +90,8 @@ p{
         width: 17vw;
         height: 17vw;
         font-size: 0.8rem;
+        padding: 2px;
+        margin: 0;
     }
     #free{
         font-size: 0.6rem;
