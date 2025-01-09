@@ -14,10 +14,10 @@ button{
     border-left-width: 1px;
     border-bottom-width: 2px;
     border-right-width: 2px;
+    color: black;
 }
 body{
     background-image: url('./images/rink.jpg');
-    /* background-color: rgb(209, 243, 248); */
     background-position: center;
     height: max-content;
 }
