@@ -90,6 +90,9 @@ p{
         height: 17vw;
         font-size: 0.8rem;
     }
+    #free{
+        font-size: 0.6rem;
+    }
     body{
         margin: 8px;
     }
