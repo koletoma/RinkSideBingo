@@ -52,6 +52,7 @@ $(()=>{
 })
 window.addEventListener("load", (event) => {
     MixItUp();
+    adjustFontSize();
   });
 
 function MixItUp() {
@@ -76,7 +77,7 @@ Difficulty Breakdown:
         "Icing", "Home Goal" , "Away Goal" , "Offside" , "Tripping" , "Hooking", "High Stick",
         "Puck In Stands" , "Broken Stick" , "3 on 2" , "Player Blocks Shot", "Glove Save", "Mascot on Camera", 
         "Face Off Violation", "Penalty Kill (Home)", "Penalty Kill (Away)",
-        "PowerPlay Goal (Home)" , "PowerPlay Goal (Away)"
+        "Power Play Goal (Home)" , "Power Play Goal (Away)"
     ];
 
     uncommonTiles = [
@@ -143,7 +144,7 @@ Difficulty Breakdown:
         tile.clicked = "false";
         tile.style.backgroundColor = "white";
     });
-    
+    adjustFontSize();
 }
 
 function shuffle(array) {
@@ -163,3 +164,15 @@ function shuffle(array) {
   
     return array;
   }
+
+function adjustFontSize() {
+const tiles = document.querySelectorAll(".tile");
+tiles.forEach(tile => {
+    if (tile.innerHTML.includes("Interference", "Power Play")) {
+        tile.style.fontSize = "0.65rem";
+    } 
+    else {
+        tile.style.fontSize = "0.8rem";
+    }
+});
+}
